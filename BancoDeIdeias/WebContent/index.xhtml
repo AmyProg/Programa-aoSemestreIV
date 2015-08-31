@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<h:html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Banco De Ideias </title>
+<link href="css/estilo.css" rel="stylesheet"/>
+</h:head>
+<h:body>
+	
+	<h:panelGrid columns="2">
+
+				<h:outputLabel value="Ideia:" for="ideia_id" />
+				<h:inputText id="ideia_id" value="#{bancodeideiasBean.bancodeideias.ideia}"
+					required="true" requiredMessage="A ideia é obrigatorio!"
+					converterMessage="A ideia deve ser em caracter!" />
+
+				<h:outputLabel value="Utilidade:" for="utilidade_id" />
+				<h:inputText id="utilidade_id"
+					value="#{bancodeideiasBean.bancodeideias.utilidade}" required="true"
+					requiredMessage="A utilidade é obrigatorio!"
+					converterMessage="A utilidade deve ser em caracter!" />
+
+				<h:outputLabel value="Nome:" for="nome_id" />
+				<h:inputText id="nome_id" value="#{bancodeideiasBean.bancodeideias.nome}"
+					required="true" requiredMessage="O nome é obrigatorio!"
+					converterMessage="O nome deve ser em caracter!"/>
+		
+				<h:outputLabel value="Email:" for="email_id" />
+				<h:inputText id="telefone_id"
+					value="#{clienteBean.cliente.telefone}" required="true"
+					requiredMessage="O telegone é obrigatorio!"
+					converterMessage="O telefone deve ser em numeros!" mask="(999)9999-9999"/>
+
+
+				<h:outputLabel value="Email:" for="email_id" />
+				<h:inputText id="email_id" value="#{clienteBean.cliente.email}"
+					required="true" requiredMessage="O email é obrigatorio!"
+					converterMessage="O email deve ser em caracter!" />
+			
+
+			</h:panelGrid>
+	
+</h:body>
+</h:html>
